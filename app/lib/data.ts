@@ -17,17 +17,32 @@ const transformedData: Co2Dataset = Object.fromEntries(
     })
 );
 
+// Create a mapping of ISO codes to country names
+const isoCodeToCountry = Object.fromEntries(
+    Object.entries(rawData).map(([country, value]) => {
+        const { iso_code } = value as Omit<Co2DataPoint, 'country'>;
+        return [iso_code, country];
+    })
+);
+
 // Typed data export
 export const data: Co2Dataset = transformedData;
+export const isoCodeMap = isoCodeToCountry;
 
 // Function to fetch CO2 data by country code
 export const getCountryData = (code: string) => {
-    const country = data[code];
+    const normalizedCode = code.toUpperCase(); // Normalize the code to uppercase
+    const countryName = isoCodeMap[normalizedCode]; // Map ISO code to country name
+
+    if (!countryName) return []; // If no mapping exists, return an empty array
+
+    const country = data[countryName];
 
     if (!country || !country.data) return [];
 
-    return country.data
-        .filter((entry) => entry.co2 !== null && typeof entry.co2 === 'number');
+    return country.data.filter(
+        (entry) => entry.co2 !== null && typeof entry.co2 === 'number'
+    );
 };
 
 // Function to get a list of countries
