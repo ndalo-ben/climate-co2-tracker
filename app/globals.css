@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.react-select__control {
+  @apply bg-gray-900 border-gray-700 text-white rounded-md min-h-[48px] hover:border-green-500 focus-within:border-green-500 shadow-none;
+}
+
+.react-select__single-value {
+  @apply text-white;
+}
+
+.react-select__placeholder {
+  @apply text-gray-400;
+}
+
+.react-select__menu {
+  @apply bg-gray-900 text-white rounded-md shadow-lg;
+}
+
+.react-select__option {
+  @apply cursor-pointer text-white bg-gray-900 hover:bg-green-600 hover:text-white;
+}
+
+.react-select__option--is-focused {
+  @apply bg-green-600 text-white;
+}
+
+.react-select__input {
+  @apply text-white;
+}
+
+.react-select__dropdown-indicator {
+  @apply text-gray-400 hover:text-white;
+}
+
+.react-select__clear-indicator {
+  @apply text-gray-400 hover:text-white;
+}
+
+.react-select__indicator-separator {
+  @apply hidden;
+}
