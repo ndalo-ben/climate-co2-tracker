@@ -1,4 +1,3 @@
-import React from 'react';
 import { FaGlobeAmericas, FaUsers, FaChartLine, FaDollarSign } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
