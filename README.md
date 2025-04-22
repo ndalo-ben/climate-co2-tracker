@@ -10,9 +10,9 @@ Explore historical CO₂ emissions trends, growth, and energy insights by countr
 
 Here’s a video showing how the platform works:
 
-![Video preview](/video-preview.png)  <!-- Replace with actual screenshot or GIF -->
+![Video preview](https://climate-co2-tracker.vercel.app/video-preview.png)  <!-- Replace with actual screenshot or GIF -->
 
-[Watch the video](/public/videos/how-it-works.mp4)
+[Watch the video](videos/how-it-works.gif)
 
 
 ---
