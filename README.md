@@ -82,7 +82,7 @@ Here’s a video showing how the platform works:
 
 ```bash
 git clone https://github.com/ndalo-ben/climate-co2-tracker.git
-cd co2-explorer
+cd climate-co2-tracker
 ```
 
 ### 2. Install dependencies
