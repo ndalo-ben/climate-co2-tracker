@@ -12,7 +12,7 @@ Here’s a video showing how the platform works:
 
 ![Video preview](https://climate-co2-tracker.vercel.app/video-preview.png)  <!-- Replace with actual screenshot or GIF -->
 
-[Watch the video](videos/how-it-works.gif)
+[Watch the video](/videos/how-it-works.gif)
 
 
 ---
