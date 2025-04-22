@@ -56,13 +56,18 @@ export default function ChartSection() {
     // Fetch country data whenever the selected country changes
     async function fetchData() {
       if (selectedCountry?.value) {
+        console.log('Selected Country:', selectedCountry.value); // Debugging
+
         setLoading(true);
         const countryData = await getCountryData(selectedCountry.value);
+
+        console.log('Fetched Country Data:', countryData); // Debugging
 
         // Filter out entries where 'co2' is null
         const filteredData = countryData.filter(entry => entry.co2 !== null);
 
-        // Now 'filteredData' should contain only valid DataPoint objects (with 'co2' as number)
+        console.log('Filtered Data:', filteredData); // Debugging
+
         setData(filteredData); // Set the filtered data
         setLoading(false);
       }

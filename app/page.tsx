@@ -1,14 +1,11 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Header from './components/Header';
-import Footer from './components/Footer';
 import ChartSection from './components/ChartSection';
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-[#0f0f0f] to-[#1e1e1e] text-white overflow-x-hidden">
-      <Header />
 
       <section className="px-6 md:px-20 py-24">
         <motion.div
@@ -27,7 +24,6 @@ export default function Home() {
           <ChartSection />
       </section>
 
-      <Footer />
     </main>
   );
 }

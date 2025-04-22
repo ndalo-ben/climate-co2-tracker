@@ -37,6 +37,14 @@ type Props = {
 };
 
 const SummaryStats: React.FC<Props> = ({ data }) => {
+  if (!data || data.length === 0) {
+    return (
+      <div className="text-center text-gray-400">
+        No data available to display.
+      </div>
+    );
+  }
+
   const latestData = data[data.length - 1];
   const totalCo2 = latestData.co2 || 0;
   const totalPopulation = latestData.population || 0;

@@ -31,14 +31,20 @@ export const isoCodeMap = isoCodeToCountry;
 
 // Function to fetch CO2 data by country code
 export const getCountryData = (code: string) => {
-    const normalizedCode = code.toUpperCase(); // Normalize the code to uppercase
-    const countryName = isoCodeMap[normalizedCode]; // Map ISO code to country name
+    const normalizedCode = code.toUpperCase();
+    const countryName = normalizedCode === 'WORLD' ? 'World' : isoCodeMap[normalizedCode];
 
-    if (!countryName) return []; // If no mapping exists, return an empty array
+    if (!countryName) {
+        console.warn(`No country found for ISO code: ${normalizedCode}`);
+        return [];
+    }
 
     const country = data[countryName];
 
-    if (!country || !country.data) return [];
+    if (!country || !country.data) {
+        console.warn(`No data found for country: ${countryName}`);
+        return [];
+    }
 
     return country.data.filter(
         (entry) => entry.co2 !== null && typeof entry.co2 === 'number'
@@ -48,7 +54,7 @@ export const getCountryData = (code: string) => {
 // Function to get a list of countries
 export const getCountryList = () => {
     return Object.entries(data).map(([code, details]) => ({
-        label: details.country || code,
-        value: code,
+        label: details.country || code, // Use the country name or fallback to the code
+        value: details.iso_code || code, // Use the ISO code or fallback to the code
     }));
 };
