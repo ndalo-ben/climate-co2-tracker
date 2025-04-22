@@ -24,13 +24,13 @@ export default function Header() {
                     Home
                 </Link>
                 <Link
-                    href="/api-docs"
+                    href="/api"
                     className={clsx(
                         "hover:text-green-400 transition-all duration-200",
-                        pathname === "/api-docs" && "underline underline-offset-4 decoration-green-500"
+                        pathname === "/api" && "underline underline-offset-4 decoration-green-500"
                     )}
                 >
-                    API Documentation
+                    API
                 </Link>
 
                 <Link

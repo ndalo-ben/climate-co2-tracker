@@ -1,13 +1,17 @@
 import { getCountryData } from '@/app/lib/data';
 import { NextResponse } from 'next/server';
 
-export async function GET(_: Request, context: { params: { code: string } }) {
-    const { code } = await context.params;
+type Props = {
+    params: Promise<{
+        code: string;
+    }>;
+};
+
+export async function GET(req: Request, { params }: Props) {
+    const { code } = await params; // Access the dynamic route parameter
     const normalizedCode = code.toUpperCase(); // Normalize the code to uppercase
 
-    
-
-    const countryData = getCountryData(normalizedCode);
+    const countryData = await getCountryData(normalizedCode);
 
     if (!countryData.length) {
         return NextResponse.json({ error: 'Country not found or has no CO₂ data' }, { status: 404 });

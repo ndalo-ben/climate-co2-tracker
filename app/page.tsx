@@ -18,7 +18,7 @@ export default function Home() {
             Tracking Global CO₂ Emissions
           </h1>
           <p className="mt-4 text-[#9c9c9c] text-lg">
-            Explore real data from 2000 to now using Our World In Data’s CO₂ emissions dataset.
+            Explore real data from 2000 to 2023 using Our World In Data’s CO₂ emissions dataset.
           </p>
         </motion.div>
           <ChartSection />

@@ -6,7 +6,14 @@ Explore historical CO₂ emissions trends, growth, and energy insights by countr
 
 <br/>
 
-![screenshot](https://your-screenshot-url.com/mockup.png) <!-- Replace with actual screenshot or GIF -->
+## 🎥 How the Platform Works
+
+Here’s a video showing how the platform works:
+
+![Video preview](https://your-screenshot-url.com/video-preview.png)  <!-- Replace with actual screenshot or GIF -->
+
+[Watch the video](https://yourwebsite.com/videos/how-it-works.mp4)
+
 
 ---
 
