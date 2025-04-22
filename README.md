@@ -10,9 +10,9 @@ Explore historical CO₂ emissions trends, growth, and energy insights by countr
 
 Here’s a video showing how the platform works:
 
-![Video preview](https://your-screenshot-url.com/video-preview.png)  <!-- Replace with actual screenshot or GIF -->
+![Video preview](https://climate-co2-tracker.vercel.app/video-preview.png)  <!-- Replace with actual screenshot or GIF -->
 
-[Watch the video](https://yourwebsite.com/videos/how-it-works.mp4)
+[Watch the video](https://climate-co2-tracker.vercel.app/videos/how-it-works.mp4)
 
 
 ---
@@ -59,7 +59,7 @@ Here’s a video showing how the platform works:
 
 - **Source**: [Our World in Data](https://github.com/owid/co2-data)
 - **License**: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
-- **Last updated**: *Dataset includes emissions data up to 2022*
+- **Last updated**: *Dataset includes emissions data up to 2023*
 
 ---
 
@@ -67,7 +67,7 @@ Here’s a video showing how the platform works:
 
 | Tech         | Description                         |
 |--------------|-------------------------------------|
-| **Next.js 14+** | App directory, Server Components |
+| **Next.js 15+** | App directory, Server Components |
 | **TypeScript** | Strong typing across the app      |
 | **Tailwind CSS** | Utility-first modern styling    |
 | **Recharts** | Beautiful data visualization       |
